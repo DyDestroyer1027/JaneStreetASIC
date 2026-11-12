@@ -22,7 +22,8 @@ module clb_3in (
 
     always @(posedge clk) begin
         if (~rst_n) begin
-            config <= '0;
+            config_a <= '0;
+            config_b <= '0;
         end else if (config_en) begin
             config_a <= config_in_a;
             config_b <= config_in_b;
